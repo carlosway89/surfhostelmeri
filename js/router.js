@@ -1,12 +1,10 @@
 // Filename: router.js
  define([
      'beans',
-     'views/home',
      'models/parse',
      'channel'
      ], function(
         Beans,
-        Home,
         ParseModel,
         Channel
      ){
@@ -14,7 +12,10 @@
             beans: new Beans,
             debug: true,
             routes: {
-                'home': 'home',   // default page reload to home
+                'home': 'home',
+                'services':'services',
+                'pricing':'pricing',
+                'gallery':'gallery'
             },
 
 
@@ -24,13 +25,49 @@
                  * Send a clear-last-view event to Channel, so that any view can clean
                  * up after itself
                  */
+                
+                require(['views/home'],function(Home){
             
                     var view = new Home({
-                        el: $('div.view-container')
+                        el: $('div.contet-page')
                     });
+                });
+                this.initial_page('home');
 
                     
             },
+            services:function(){
+                this.initial_page('services');
+            },
+            gallery:function(){
+                this.initial_page('gallery');
+            },
+            pricing:function(){
+                this.initial_page('pricing');
+            },
+            initial_page:function(root){
+
+                var principal=$('.principal-page');
+                var content=$('div.content-page');
+                var nav_menu=$('.nav-menu');
+
+                $('body,html').animate({ scrollTop: 0}, 800);
+
+                if(!principal.hasClass('top5'))
+                    principal.addClass('top5');
+
+                nav_menu.find('.clicked').removeClass('clicked');
+                nav_menu.find('a').removeClass('actived');
+                nav_menu.find('#'+root).addClass('clicked').find('a').addClass('actived');
+
+                if(!content.is(':visible'))
+                    content.delay(300).show('slide',800);
+                else
+                    content.hide('slide',800,function(){
+                        content.delay(300).show('slide',800);    
+                    });           
+
+            }
 
 
         });
@@ -62,7 +99,7 @@
                 /**
                  * Set default route
                  */
-                if ( ! window.location.hash.length ) window.location.hash = '#home';
+                // if ( ! window.location.hash.length ) window.location.hash = '#home';
                 Backbone.history.start();
 
      };

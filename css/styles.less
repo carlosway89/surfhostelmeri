@@ -1,0 +1,130 @@
+@bluesky:#85F8D2;
+@blue:#4087DA;
+@purple:#FF00EB;
+@green:#32645D;
+@grey:#696E82;
+
+body{
+  background-color: @green;
+  font-family: 'Dosis', sans-serif !important;
+}
+.row{
+    // margin-left:0px;
+    // margin-right:0px;
+}
+.unmargin{
+    margin-left:-15px;
+    margin-right:-15px; 
+}
+#wraper{
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+
+}
+.carousel-inner>.item>img{
+  width:100%;
+}
+label{
+    font-size: 26px !important;
+    text-shadow: 2px 2px #000;
+}
+small{
+    font-size: 14px !important;
+    color:black;
+}
+.fondo{
+  // background: none repeat scroll 0% 0% rgba(50,100, 93, 0.4);
+  position:absolute !important;
+  top:0px;
+  height:900px;
+  width:100%;
+  z-index: 500px;
+}
+.principal-page{
+    z-index: 700px;
+    position:absolute !important;
+    top:40%;
+    width: 100%;
+
+}
+.top5{
+  top:5% !important;
+  transition: all .4s ease 0s;
+}
+.menu{
+  border-radius: 7px;
+  background: none repeat scroll 0% 0% rgba(0,0,0,0.9);
+  width:100%;
+  height:170px;
+  >ul{
+    padding-left: 20px;
+  }
+}
+.nav-menu{
+  font-size: 24px;
+  height:inherit;
+  >li{
+    
+    height: 100%;
+    padding-top: 80px;
+    span{
+      height:100px;
+    }
+    >a{
+      color:white;
+      text-decoration: none;
+      width:120px;
+      height:170px;
+      padding:20px;
+      &:hover{        
+        color:@purple !important;
+      }
+    }
+    
+  }
+  .clicked{
+    border-bottom: 3px solid @purple;
+  }
+  .links{
+    &:hover{
+      border-bottom: 3px solid @purple;
+    }
+    .actived{
+      color:@purple !important;  
+    }
+
+  }
+}
+
+.logo{
+  height:60px;
+  margin-left: 80px;
+  text-shadow: 2px 2px #000;
+  margin-top: -100px
+}
+.position-logo{
+  label{
+    color:@purple;
+  }
+}
+.separate-line{
+  padding-top:40px;
+  padding-bottom: 30px;
+  border-left: 1px solid @green;
+}
+.content-page{
+  padding:20px;
+  border-radius: 7px;
+  background: none repeat scroll 0% 0% rgba(0,0,0,0.9);
+  width:100%;
+  height:600px;
+}
+
+@media (max-width:767px) {
+    #wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+    }
+}
