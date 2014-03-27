@@ -24,39 +24,54 @@
     <script src="js/xo.js"></script>
     <script data-main="js/main" src="js/require.js"></script>
 
+    <script type="text/javascript">
+      var fadeDuration=1500;
+      var fadeDuration1=600;
+      var slideDuration=4500;
+      var currentIndex=1;
+      var nextIndex=1;
+
+      $(document).ready(function()
+      { 
+        
+
+        $('ul.carousel-inner .item').css({opacity: 0.0});
+        $('ul.carousel-inner .item:nth-child('+nextIndex+')').addClass('show').animate({opacity: 1.0}, fadeDuration1);
+        var timer = setInterval('nextSlide()',slideDuration);
+      })
+
+      function nextSlide(){
+        nextIndex =currentIndex+1;
+        if(nextIndex > $('ul.carousel-inner .item').length)
+        {
+          nextIndex =1;
+        }
+        $('ul.carousel-inner .item:nth-child('+nextIndex+')').addClass('show').animate({opacity: 1.0}, fadeDuration);
+        $('ul.carousel-inner .item:nth-child('+currentIndex+')').animate({opacity: 0.0}, fadeDuration).removeClass('show');
+        currentIndex = nextIndex;
+      }
+
+
+    </script>
+
   </head>
 
 <body>
     
     <div id="wraper">
-      <div id="carousel-backgroung" class="carousel slide" data-ride="carousel">
+      <div id="carousel-backgroung" class="carousel-fade slide" >
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="img/1.jpg" alt="...">
-          </div>
-          <div class="item">
-            <img src="img/2.jpg" alt="...">
-          </div>
-          <div class="item">
-            <img src="img/3.jpg" alt="...">
-          </div>
-          <div class="item">
-            <img src="img/4.jpg" alt="...">
-          </div>
-          <div class="item">
-            <img src="img/5.jpg" alt="...">
-          </div>
-          <div class="item">
-            <img src="img/6.jpg" alt="...">
-          </div>
-        </div>
+        <ul class="list-none carousel-inner">
+          <li class="item"><img  src="img/1.jpg" ></li>
+          <li class="item"><img  src="img/2.jpg" ></li>
+          <li class="item"><img  src="img/3.jpg" ></li>
+          <li class="item"><img  src="img/4.jpg" ></li>
+          <li class="item"><img  src="img/5.jpg" ></li>
+        </ul>
+        
       </div>
 
     </div>
-    <div class="fondo">
-    </div>
-
     <div class="principal-page ">
 
       <div class="container">

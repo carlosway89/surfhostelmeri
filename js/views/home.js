@@ -1,5 +1,5 @@
 define([
-    'text!/surfhostelmeri/templates/home.php',
+    'text!/templates/home.php',
     'beans',
     'collections/parse',
     'models/parse',
@@ -18,7 +18,6 @@ define([
             },
             render: function() {
                 this.$el.html( Handlebars.compile( tmpl)(this));
-                this.call_model();
                 return this;
             }
 

@@ -5,7 +5,7 @@
 @grey:#696E82;
 
 body{
-  background-color: @green;
+  background-color: @grey;
   font-family: 'Dosis', sans-serif !important;
 }
 .row{
@@ -23,8 +23,23 @@ body{
     height: auto;
 
 }
-.carousel-inner>.item>img{
-  width:100%;
+.carousel-inner{
+  list-style: none outside none;
+  position: relative;
+  overflow: visible !important;
+  
+  >.item{
+    display:block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: inline;
+    width:100%;
+    margin-top: -10px;
+    >img{
+      width:100%;
+    }
+  }
 }
 label{
     font-size: 26px !important;

@@ -9,10 +9,10 @@
          var debug = false;
          var $this = this;
 
-        AppRouter.initialize();
-            
-        
+        AppRouter.initialize();  
+  
     };
+
      return {
          initialize: initialize
      };
