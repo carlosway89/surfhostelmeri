@@ -29,7 +29,7 @@
                 require(['views/home'],function(Home){
             
                     var view = new Home({
-                        el: $('div.contet-page')
+                        el: $('div.content-page')
                     });
                 });
                 this.initial_page('home');
@@ -55,7 +55,10 @@
 
                 if(!principal.hasClass('top5'))
                     principal.addClass('top5');
-
+                var width=$( document ).width();
+                if(width<=992){
+                    var nav_menu=$('.nav-menu-sm');
+                }
                 nav_menu.find('.clicked').removeClass('clicked');
                 nav_menu.find('a').removeClass('actived');
                 nav_menu.find('#'+root).addClass('clicked').find('a').addClass('actived');
