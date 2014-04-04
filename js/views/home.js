@@ -19,16 +19,6 @@ define([
             render: function() {
                 this.$el.html( Handlebars.compile( tmpl)(this));
 
-                // how use resize and crop plugin
-                // $(document).ready(function(){
-
-                    
-                //     // $('.example').resizecrop({
-                //     //     width: '60',
-                //     //     height: '90'
-                //     // });
-
-                // });
                 $(document).ready(function(ev){
                     $('#custom_carousel').on('slide.bs.carousel', function (evt) {
                       $('#custom_carousel .controls li.active').removeClass('active');
@@ -39,7 +29,7 @@ define([
                     var itemlength = $('.item').length;
                     var triggerheight = Math.round(boxheight/itemlength+1);
                     $('.list-group-item').outerHeight(triggerheight); //maybe Bootsnipp only
-                    //$('.list-group-item').height(triggerheight); //works fine in local testing
+                    $('.list-group-item').height(triggerheight+30); //works fine in local testing
                     
                     var clickEvent = false;
                     $('#informationCarousel').carousel({

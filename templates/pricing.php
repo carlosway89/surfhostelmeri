@@ -1,13 +1,31 @@
 <div class="row">
-	<div class="col-md-8">
-		<img  class="img-responsive" src="img/4.jpg">
-
-	</div>
-	<div class="line col-md-4">
-		<img src="img/word_shm.png" class="img-responsive">
-		<p class="text-white">
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book rd dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen bookrd dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-		</p>
-		
-	</div>
+    <div class="col-md-12">
+        <h2 class="text-purple"> Pricing and Book</h2>
+    </div>
 </div>
+<br>
+<div class="row">
+	<div class="col-md-4 ">
+		<div class="column productbox">
+			<img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
+		    <div class="producttitle">Product 2</div>
+		    <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
+		</div>	    
+	</div>
+	<div class="col-md-4 ">
+		<div class="column productbox">
+			<img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
+		    <div class="producttitle">Product 2</div>
+		    <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
+		</div>	    
+	</div>
+	<div class="col-md-4 ">
+		<div class="column productbox">
+			<img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
+		    <div class="producttitle">Product 2</div>
+		    <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
+		</div>	    
+	</div>
+
+</div>
+

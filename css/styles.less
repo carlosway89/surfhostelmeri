@@ -3,6 +3,8 @@
 @purple:#FF00EB;
 @green:#32645D;
 @grey:#696E82;
+@bg_green:rgba(49, 98, 91, 0.7);
+@bg_pruple:rgba(255, 0, 235, 0.75);
 
 body{
   background-color: @grey;
@@ -129,6 +131,10 @@ small{
 
   height:60px;
 }
+
+.logo-home{
+  max-height: 60px;
+}
 .position-logo{
   label{
     color:@purple;
@@ -144,10 +150,16 @@ small{
   border-left: 1px solid @green;
 }
 .text-white{
+  text-decoration: none;
   color:white !important;
 }
 .text-purple{
+  
   color:@purple;
+  &:hover{
+    text-decoration: none;
+    color:@purple;
+  }
 }
 .col-md-05{
   width: 4.166666%;
@@ -160,6 +172,7 @@ small{
   width:100%;
   // height:600px;
   margin-bottom: 60px;
+  overflow:hidden;
 }
 .text-title{
   color:@grey;
@@ -248,14 +261,15 @@ small{
 .thumbnail {
     position:relative;
     overflow:hidden;
-    border-radius: 50%;
+    // border-radius: 50%;
 }
  
 .caption {
     position:absolute;
     top:-100%;
     right:0;
-    background:rgba(255, 0, 235, 0.75);
+    // background:rgba(255, 0, 235, 0.75);
+    background:rgba(49, 98, 91, 0.7);
     width:100%;
     height:100%;
     padding:2%;
@@ -267,12 +281,112 @@ small{
     -o-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    p{
+      font-size: 14px;
+    }
 }
 .thumbnail:hover .caption {
     top:0%;
 }
 /*end */
+
+/* pricing */
+
+.productbox {
+    background-color:#ffffff;
+    border-radius: 6px;
+  padding:10px;
+  margin-bottom:10px;
+  -webkit-box-shadow: 0 8px 6px -6px  #999;
+     -moz-box-shadow: 0 8px 6px -6px  #999;
+          box-shadow: 0 8px 6px -6px #999;
+}
+
+.producttitle {
+    font-weight:bold;
+  padding:5px 0 5px 0;
+}
+
+.productprice {
+  border-top:1px solid #dadada;
+  padding-top:5px;
+}
+
+.pricetext {
+  font-weight:bold;
+  font-size:1.4em;
+}
+
+/*end*/
+
+
+/* pricing css*/
+
+.glyphicon-lg{font-size:3em}
+.blockquote-box{border-right:5px solid #E6E6E6;margin-bottom:25px}
+.blockquote-box .square{width:100px;min-height:50px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:20px 0}
+.blockquote-box.blockquote-primary{border-color:#357EBD}
+.blockquote-box.blockquote-primary .square{background-color:#428BCA;color:#FFF}
+.blockquote-box.blockquote-success{border-color:#4CAE4C}
+.blockquote-box.blockquote-success .square{background-color:#5CB85C;color:#FFF}
+.blockquote-box.blockquote-info{border-color:#46B8DA}
+.blockquote-box.blockquote-info .square{background-color:#5BC0DE;color:#FFF}
+.blockquote-box.blockquote-warning{border-color:#EEA236}
+.blockquote-box.blockquote-warning .square{background-color:#F0AD4E;color:#FFF}
+.blockquote-box.blockquote-danger{border-color:#D43F3A}
+.blockquote-box.blockquote-danger .square{background-color:#D9534F;color:#FFF}
+/*end*/
+
+
+/* gallery css*/
+#lightbox .modal-content {
+    display: inline-block;
+    text-align: center;   
+}
+
+#lightbox .close {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+    padding: 5px 8px;
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    top: 15px;
+    right: -65px;
+    
+    z-index:1032;
+}
+
+.hover-information{
+  position:absolute !important;
+  top:0;
+  width:203px;
+  height:160px;
+  font-size: 35px;
+    text-align: center;
+  background-color:@bg_green;
+  .text-white;
+  >span{
+    top:30%;
+
+  }
+  &:hover{
+    display:none;
+  }
+}
+
+
+img.resizecrop{
+  left:0px !important;
+
+}
+
+/*end*/
 @media (min-width: 768px) {
+  .hover-information{
+    display:none !important;
+  }
   #custom_carousel{
     .carousel-inner{
       img{
@@ -329,8 +443,15 @@ small{
       padding-left: 70px;
       transition: all .4s ease 0s;
     }
+  .hover-information{
+    display:none !important;
+  }
 }
 @media (min-width: 992px) {
+
+  .hover-information{
+    display:block !important;
+  }
   #custom_carousel{
     .carousel-inner{
       border-radius:6px 6px 0px 0px;
