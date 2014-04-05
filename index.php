@@ -4,6 +4,7 @@
     <title>Surf Hostel Meri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet/less" href="css/styles.less" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Dosis:400,300,200,500' rel='stylesheet' type='text/css'>
 
@@ -93,6 +94,21 @@
               </div>
           </div>
           
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-md-offset-8">
+            <div class="dark-background text-center">              
+              <a href="#" title="English"><i class="flag-england"></i></a> 
+              <a href="#" title="Spanish"><i class="flag-peru"></i></a>
+              <a href="#" title="Finland"><i class="flag-finland"></i></a>            
+              <a href="#" title="Holland"><i class="flag-holland"></i></a>
+              <a href="#" title="German"><i class="flag-germany"></i></a>              
+              <a href="#" title="French"><i class="flag-france"></i></a> 
+              
+            </div>
+            <br>
+            
+          </div>
         </div>
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
