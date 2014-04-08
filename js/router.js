@@ -15,7 +15,10 @@
                 'home': 'home',
                 'services':'services',
                 'pricing':'pricing',
-                'gallery':'gallery'
+                'gallery':'gallery',
+                'admin':'admin',
+                'login':'login',
+                'logout':'logout'
             },
 
 
@@ -63,6 +66,62 @@
                     });
                 });
             },
+            admin: function(){
+
+                /**
+                 * Send a clear-last-view event to Channel, so that any view can clean
+                 * up after itself
+                 */
+                if(this.beans.is_logged_in()){
+                    require(['views/admin'],function(Admin){
+                
+                        var view = new Admin({
+                            el: $('div.content-page-admin')
+                        });
+                    });
+                }
+                else
+                    window.location.hash = '#login';
+                
+                
+
+                    
+            },
+            login: function(){
+
+                /**
+                 * Send a clear-last-view event to Channel, so that any view can clean
+                 * up after itself
+                 */
+                 if(this.beans.is_logged_in()){
+                    window.location.hash = '#admin';
+                 }
+                 else{
+                    require(['views/login'],function(Login){
+                
+                        var view = new Login({
+                            el: $('div.content-page-admin')
+                        });
+                    });
+                 }
+
+                
+                
+
+                    
+            },
+            logout:function(){
+                // delete the Cookie if any
+                this.beans.eraseCookie('user.session');
+
+                // remove session
+                this.beans.session_token = null;
+
+                Parse.User.logOut();
+
+                window.location.hash = '#login';
+
+            },            
             initial_page:function(root){
 
                 var principal=$('.principal-page');
@@ -123,7 +182,7 @@
                 /**
                  * Set default route
                  */
-                // if ( ! window.location.hash.length ) window.location.hash = '#home';
+                if ( window.location.pathname=='/panel/' ) window.location.hash = '#login';
                 Backbone.history.start();
 
      };

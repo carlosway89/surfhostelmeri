@@ -82,12 +82,7 @@
           <div class="col-md-10 col-md-offset-1">
               <div class="menu">
                 <ul class="list-inline nav-menu ">
-                  <li>
-                    <a class="position-logo text-center" href="">
-                      <img class="img-responsive logo" src="img/logo_shm.png">
-                        <label>SURF HOSTEL MERI</label>
-                     </a>
-                  </li>
+                  
                   <!-- rest of menu-->
                 </ul>
 
@@ -97,14 +92,8 @@
         </div>
         <div class="row">
           <div class="col-md-3 col-md-offset-8">
-            <div class="dark-background text-center">              
-              <a href="#" title="English"><i class="flag-england"></i></a> 
-              <a href="#" title="Spanish"><i class="flag-peru"></i></a>
-              <a href="#" title="Finland"><i class="flag-finland"></i></a>            
-              <a href="#" title="Holland"><i class="flag-holland"></i></a>
-              <a href="#" title="German"><i class="flag-germany"></i></a>              
-              <a href="#" title="French"><i class="flag-france"></i></a> 
-              
+            <div class="dark-background text-center content-flag" style="display:none">              
+                           
             </div>
             <br>
             
