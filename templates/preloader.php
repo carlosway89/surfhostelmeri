@@ -1,3 +1,3 @@
-<div id="waiting-preloader" class="text-center">
-	<img class="img-responsive" src="img/preloader2.gif" tile="preloader">
-</div>
+<!-- <div id="waiting-preloader" class="text-center"> -->
+	<img src="{{this.panel}}img/{{this.type}}.gif" tile="preloader">
+<!-- </div> -->

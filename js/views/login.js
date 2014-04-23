@@ -30,7 +30,7 @@ define([
                 Parse.User.logIn(this.username(),this.password(), {
                     success: function(user) {
                         console.log(user);
-                        button.html(html).removeAttr('disabled');
+                        // button.html(html).removeAttr('disabled');
                         // save token in Cookie
                         that.beans.createCookie('user.session',user._sessionToken,10);
 

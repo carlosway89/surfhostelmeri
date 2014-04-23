@@ -39,10 +39,8 @@ body {
   user-select: none;
   position: relative;
   font: 15px 'Segoe UI',Arial,sans-serif;
-  background-color: #EAEBE5;
   height: auto;
   padding: 10px;
-  color:#7e8c8d;
   outline:none;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -246,9 +244,9 @@ body {
  .user-info-block .user-heading {width: 100%; text-align: center; margin: 10px 0 0;}
  .user-info-block .navigation {float: left; width: 100%; margin: 0; padding: 0; list-style: none; border-bottom: 1px solid #428BCA; border-top: 1px solid #428BCA;}
   .navigation li {float: left; margin: 0; padding: 0;}
-   .navigation li a {padding: 20px 30px; float: left;}
+   .navigation li a {padding: 10px 20px; float: left;}
    .navigation li.active a {background: #428BCA; color: #fff;}
- .user-info-block .user-body {float: left; padding: 5%; width: 90%;}
+ .user-info-block .user-body {float: left; padding: 3%; width: 100%;}
   .user-body .tab-content > div {float: left; width: 100%;}
   .user-body .tab-content h4 {width: 100%; margin: 10px 0; color: #333;}
 
@@ -295,7 +293,101 @@ body {
 }
 
 
+/*icon flag*/
+[class^="flag-"],
+[class*=" flag-"] {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../img/flag-icons.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  opacity:0.9;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+.opacity{
+  opacity:0.4 !important;
+}
+.flag-peru{
+  background-position: -339px -65.3px;
+  .opacity;
+}
+.flag-finland {
+  background-position: -5px -96px;
+  .opacity;
+}
+.flag-france {
+  background-position: -157px -35.3px;
+  .opacity;
+}
+.flag-england {
+  background-position: -218px -96px;
+  .opacity;
+}
+.flag-germany {
+  background-position: -66px -35px;
+  .opacity;
+}
+.flag-holland {
+  background-position: -127px -66px;
+  .opacity;
+}
+.flag-actived{
+  opacity:1 !important;
+}
+.lang{
+  cursor:pointer;
+  &:hover{
+      text-decoration: none;
+  }
+}
+.border{
+  border:1px solid #DDD;
+  border-radius: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 3px;
+}
+.border:first-child {
+    padding-left: 5px !important;
+}
+.img-panel{
+  height:200px;
+}
+.custom-input-file {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.custom-input-file .input-file {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 10000px;
+    border: 10000px solid transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    right: -1000px;
+    top: -1000px;
+    cursor: pointer;
+}
+.gray-scale{
+  -moz-filter: grayscale(100%);
+  -o-filter:grayscale(100%);
+  -ms-filter:grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); /* For Webkit browsers */
+  filter: gray; /* For IE 6 - 9 */
+  -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
 
+}
 
 @media screen and (min-width:800px){
   #forkongithub {

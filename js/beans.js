@@ -44,14 +44,18 @@ define([
          * Show a Preloader
          * @param root 
          */
-        this.preloader= function(root){
+        this.preloader= function(_root,type,action){
             var view = null;
+            var root=$(_root);
             // remove existing
             if ( root.children().length )
                 root.children().remove();
 
             require(['views/preloader'],function(Preloader){
-                view = new Preloader();
+                view = new Preloader({
+                    type:type,
+                    action:action
+                });
                 if ( view ) root.prepend( view.render().el );
             });
         };

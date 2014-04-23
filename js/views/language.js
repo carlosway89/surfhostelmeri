@@ -21,7 +21,26 @@ define([
             },
             change_language:function(){
                 this.beans.createCookie('language.choice',this.lang(),10);
-                Channel.trigger('change.language.bar');                
+                Channel.trigger('change.language.bar');
+
+                var placed=window.location.hash;
+                
+                switch(placed){
+                    case '#home':
+                        Channel.trigger('change.language.home');
+                    break;
+                    case '#services':
+                        Channel.trigger('change.language.services');
+                    break;
+                    case '#gallery':
+                        Channel.trigger('change.language.gallery');
+                    break;
+                    case '#pricing':
+                        Channel.trigger('change.language.pricing');
+                    break;
+                } 
+                
+                               
                 this.$el.find('.flags').addClass('flag-actived');
 
             },            

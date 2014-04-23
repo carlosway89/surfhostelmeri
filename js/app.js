@@ -48,8 +48,8 @@
          var beans = new Beans;
          var debug = false;
          var that = this;
-
-
+         
+         
          beans.createCookie('language.choice','en',10);
          
          Parse.initialize('PudrdGU0QlTFG1zsyMuFD3pYRAZncLN8Nw7wbRK2','fS2ZEabMP6LNKmXWi36eXcmqnq1ZEuu2UGDiv8Pc');
@@ -66,6 +66,7 @@
                     where: {
                         enabled:true                       
                     }});
+
                     lang.fetch({
                         success: function(collection,results,options){
                             $.each( results.results,function(index,result){
