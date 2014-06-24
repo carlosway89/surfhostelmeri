@@ -24,21 +24,23 @@ define([
             },
             call_pages:function(){
 
+                view_gallery = new AdminGallery();
+
+                $('div.tab-content-nagivation').append(view_gallery.render().el);
+
                 view_home = new AdminHome();
 
                 $('div.tab-content-nagivation').append(view_home.render().el);
 
-                view_services = new AdminServices();
+                // view_services = new AdminServices();
 
-                $('div.tab-content-nagivation').append(view_services.render().el);
+                // $('div.tab-content-nagivation').append(view_services.render().el);
 
-                view_gallery = new AdminGallery();
-
-                $('div.tab-content-nagivation').append(view_gallery.render().el);
                 
-                view_pricing = new AdminPricing();
+                
+                // view_pricing = new AdminPricing();
 
-                $('div.tab-content-nagivation').append(view_pricing.render().el);
+                // $('div.tab-content-nagivation').append(view_pricing.render().el);
 
             },
             render: function() {

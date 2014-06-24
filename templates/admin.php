@@ -34,27 +34,29 @@
                         <label>Home</label>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a data-toggle="tab" href="#services">
                         <span class="glyphicon glyphicon-cutlery"></span>
                         <label>Services</label>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a data-toggle="tab" href="#gallery">                    	
                         <span class="glyphicon glyphicon-camera"></span>
                         <label>Gallery</label>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a data-toggle="tab" href="#pricing">                    	
                         <span class="glyphicon glyphicon-eye-open"></span>
                         <label>Pricing</label>
                     </a>
-                </li>
+                </li> -->
             </ul>
             <div class="user-body">
                 <div class="tab-content tab-content-nagivation">
+
+                    
 
                 
                 </div>

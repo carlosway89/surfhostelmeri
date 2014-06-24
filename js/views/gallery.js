@@ -15,7 +15,7 @@ define([
             events: {
             },
             initialize: function() {
-
+               
                 this.render();
                 this.call_album();
                 

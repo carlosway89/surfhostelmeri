@@ -4,9 +4,8 @@
     <title>Surf Hostel Meri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet/less" href="css/styles.less" type="text/css" />
-    <link href='http://fonts.googleapis.com/css?family=Dosis:400,300,200,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:400,300,200,500' rel='stylesheet' type='text/css'>
 
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery-ui-1.9.2.custom.js"></script>

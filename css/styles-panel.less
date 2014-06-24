@@ -388,7 +388,61 @@ body {
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
 
 }
+.img-album{
+  width: 190px !important;
+  height: 150px;
+  overflow:hidden;
+  vertical-align: baseline !important;
+}
+.photo-delete{
+  position:absolute;
+  margin-left: -30px;
+  margin-top: 10px;
+}
+.add-new-photo{
+  
+  border:2px dashed #DDD;
+  border-radius: 7px;
+  width: 190px !important;
+  height: 150px;  
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  span{
+    color:#DDD;
+    margin-top: 40px;
+    font-size: 60px !important;  
+  }
+  .input-file {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px none;
+    font-size: 10000px;
+    border: 10000px solid transparent;
+    opacity: 0;
+    position: absolute;
+    right: -1000px;
+    top: -1000px;
+    cursor: pointer;
+  }
+}
+a{
+  cursor:pointer !important;
+}
+.new-photo{
+  border:2px solid #DDD;
+  width: 190px !important;
+  height: 150px;  
+  overflow: hidden;
+  position: relative;
+  img{
+    margin-top: 60px;
+  }
 
+}
+.text-blue{
+  color:#428BCA !important;
+}
 @media screen and (min-width:800px){
   #forkongithub {
     position:absolute;
